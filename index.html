@@ -1,0 +1,501 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LIVESTOCK GENESIS PLUS+ | Global Premium Genetics</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;800&display=swap');
+        body { font-family: 'Outfit', sans-serif; scroll-behavior: smooth; }
+        .gradient-agri { 
+            background: linear-gradient(135deg, rgba(6, 78, 59, 0.95) 0%, rgba(5, 150, 105, 0.90) 100%), 
+                        url('https://images.unsplash.com/photo-1500595046743-cd271d694d30?auto=format&fit=crop&w=1920&q=80') center/cover fixed; 
+        }
+        /* Custom Scrollbar */
+        ::-webkit-scrollbar { width: 10px; }
+        ::-webkit-scrollbar-track { background: #f1f5f9; }
+        ::-webkit-scrollbar-thumb { background: #059669; border-radius: 5px; }
+        /* Ticker Animation */
+        @keyframes ticker { 0% { transform: translateX(100%); } 100% { transform: translateX(-100%); } }
+        .animate-ticker { display: inline-block; white-space: nowrap; animation: ticker 25s linear infinite; }
+        /* Hide scrollbar for horizontal scrolling containers */
+        .no-scrollbar::-webkit-scrollbar { display: none; }
+        .no-scrollbar { -ms-overflow-style: none; scrollbar-width: none; }
+    </style>
+</head>
+<body class="bg-stone-50 text-slate-900">
+
+    <!-- Custom Toast Notification System -->
+    <div id="toast" class="fixed top-24 right-4 z-[100] transform transition-all duration-300 translate-x-full opacity-0 bg-stone-900 text-white px-6 py-4 rounded-xl shadow-2xl flex items-center gap-3">
+        <span class="text-emerald-400 text-xl">✓</span>
+        <p id="toastMessage" class="font-medium"></p>
+    </div>
+
+    <nav class="bg-white/95 backdrop-blur-md sticky top-0 z-50 border-b border-stone-200 shadow-sm">
+        <div class="max-w-7xl mx-auto px-4 py-3 flex justify-between items-center">
+            <div class="flex items-center gap-2">
+                <div class="w-10 h-10 bg-emerald-600 rounded-xl flex items-center justify-center text-white font-bold shadow-lg shadow-emerald-200">G+</div>
+                <h1 class="text-xl font-bold tracking-tight">GENESIS <span class="text-emerald-600">PLUS+</span></h1>
+            </div>
+            <div class="hidden lg:flex gap-6 font-medium text-slate-600 text-sm">
+                <a href="#about" class="hover:text-emerald-600 transition">About Us</a>
+                <a href="#cattle" class="hover:text-emerald-600 transition">Cattle</a>
+                <a href="#shoats" class="hover:text-emerald-600 transition">Sheep & Goats</a>
+                <a href="#genetics" class="hover:text-emerald-600 transition">Genetics/AI</a>
+                <a href="#consulting" class="hover:text-emerald-600 transition">Farm Setup</a>
+                <a href="#logistics" class="hover:text-emerald-600 transition">Export</a>
+            </div>
+            <a href="https://wa.me/254799008282?text=Hello!%20I%20am%20ready%20to%20discuss%20a%20livestock%20purchase." target="_blank" class="bg-emerald-600 text-white px-6 py-2.5 rounded-full font-bold text-sm hover:bg-emerald-700 transition shadow-lg flex items-center gap-2">
+                <span>Talk to Sales</span>
+                <span class="bg-white/20 px-2 py-0.5 rounded text-xs animate-pulse">Live</span>
+            </a>
+        </div>
+    </nav>
+
+    <div class="bg-emerald-900 text-emerald-100 text-xs py-2 overflow-hidden border-b border-emerald-800">
+        <div class="animate-ticker font-semibold tracking-wide">
+            🚀 RECENT EXPORTS: 50 Pedigree Boer Goats to UAE | 120 Friesian Heifers to Uganda | 200 Dorper Sheep to DRC | 🏆 NEW ARRIVAL: Champion South African Boran Bulls now available for viewing in Kenya!
+        </div>
+    </div>
+
+    <header class="gradient-agri text-white py-24 px-4 relative overflow-hidden">
+        <div class="absolute inset-0 bg-[url('https://www.transparenttextures.com/patterns/cubes.png')] opacity-10 mix-blend-overlay"></div>
+        <div class="max-w-5xl mx-auto text-center relative z-10">
+            <span class="inline-block py-1.5 px-4 rounded-full bg-emerald-500/20 text-emerald-100 text-sm font-bold mb-6 border border-emerald-400/30 backdrop-blur-sm">🌍 Africa's #1 Premium Livestock Supplier</span>
+            <h2 class="text-5xl md:text-7xl font-extrabold mb-6 leading-tight drop-shadow-lg">Build Your Empire With <br><span class="text-emerald-300">Elite Genetics.</span></h2>
+            <p class="text-xl text-emerald-50 mb-10 max-w-3xl mx-auto font-light">
+                We supply world-class Dairy, Beef, Goats, and Sheep globally. From single pedigree bulls to 1,000-head commercial farm setups—we handle the sourcing, vetting, and export logistics.
+            </p>
+            <div class="flex flex-col sm:flex-row justify-center gap-4">
+                <a href="#vip" class="bg-white text-emerald-900 px-8 py-4 rounded-xl font-bold hover:bg-emerald-50 transition shadow-2xl text-lg">Request a Custom Quote</a>
+                <a href="https://wa.me/254799008282?text=Send%20me%20the%20complete%202026%20Breed%20Catalog%20and%20Pricing." target="_blank" class="bg-transparent border-2 border-emerald-400 text-white px-8 py-4 rounded-xl font-bold hover:bg-emerald-400/20 transition text-lg flex justify-center items-center gap-2">WhatsApp Us <span class="text-xl">📱</span></a>
+            </div>
+            
+            <div class="mt-16 grid grid-cols-2 md:grid-cols-4 gap-4 max-w-4xl mx-auto border-t border-white/20 pt-8">
+                <div><h3 class="text-4xl font-bold text-emerald-300">5k+</h3><p class="text-sm text-emerald-100">Animals Exported</p></div>
+                <div><h3 class="text-4xl font-bold text-emerald-300">100%</h3><p class="text-sm text-emerald-100">Vet Certified</p></div>
+                <div><h3 class="text-4xl font-bold text-emerald-300">15+</h3><p class="text-sm text-emerald-100">Countries Served</p></div>
+                <div><h3 class="text-4xl font-bold text-emerald-300">24/7</h3><p class="text-sm text-emerald-100">Agri-Consulting</p></div>
+            </div>
+        </div>
+    </header>
+
+    <section id="about" class="py-20 px-4 bg-white">
+        <div class="max-w-6xl mx-auto grid md:grid-cols-2 gap-12 items-center">
+            <div>
+                <span class="text-emerald-600 font-bold uppercase tracking-widest text-sm mb-2 block">Our Mission</span>
+                <h3 class="text-4xl font-extrabold mb-6">Not Just Brokers. <br>We Are Farm Architects.</h3>
+                <p class="text-slate-600 mb-6 text-lg leading-relaxed">
+                    Most suppliers just sell you an animal. At <strong>GENESIS PLUS+</strong>, we sell profitability. We understand that your livestock is an investment asset that needs to yield returns. 
+                </p>
+                <p class="text-slate-600 mb-8 text-lg leading-relaxed">
+                    Whether you are establishing a commercial dairy in Kenya, a beef feedlot in the Middle East, or a premium stud farm—our team of geneticists, vets, and logistics experts ensures you get the exact foundation stock required to dominate your market.
+                </p>
+                <ul class="space-y-4 mb-8">
+                    <li class="flex items-center gap-3 font-bold text-slate-800"><span class="text-emerald-500 text-xl">✔</span> DNA Tested & Pedigree Registered</li>
+                    <li class="flex items-center gap-3 font-bold text-slate-800"><span class="text-emerald-500 text-xl">✔</span> Climate-Resilient Bloodlines</li>
+                    <li class="flex items-center gap-3 font-bold text-slate-800"><span class="text-emerald-500 text-xl">✔</span> End-to-End Insurance Available</li>
+                </ul>
+            </div>
+            <div class="relative">
+                <div class="absolute inset-0 bg-emerald-600 transform translate-x-4 translate-y-4 rounded-3xl"></div>
+                <img src="https://images.unsplash.com/photo-1594771804886-a933bb2d609b?auto=format&fit=crop&w=800&q=80" alt="Founder examining cattle" class="relative rounded-3xl z-10 w-full h-[500px] object-cover shadow-xl">
+                <div class="absolute bottom-10 -left-10 z-20 bg-white p-6 rounded-2xl shadow-2xl border border-stone-100 max-w-xs">
+                    <p class="text-sm font-bold text-slate-800 italic">"The right genetics will save you 10 years of farming struggles."</p>
+                    <p class="text-xs text-emerald-600 mt-2 font-bold">— Director, Genesis Plus+</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="cattle" class="py-20 px-4 bg-stone-100 border-t border-stone-200">
+        <div class="max-w-7xl mx-auto">
+            <div class="text-center mb-16">
+                <h3 class="text-4xl font-extrabold mb-4">Elite Cattle Division</h3>
+                <p class="text-slate-600 max-w-2xl mx-auto text-lg">High-yield dairy and fast-converting beef genetics sourced from champion bloodlines across Africa, Europe, and South America.</p>
+            </div>
+
+            <div class="grid lg:grid-cols-2 gap-8 mb-12">
+                <!-- Dairy Focus -->
+                <div class="bg-white rounded-3xl p-8 shadow-sm border border-stone-200 hover:shadow-xl transition">
+                    <div class="h-64 rounded-2xl mb-6 overflow-hidden">
+                        <img src="https://images.unsplash.com/photo-1570042225831-d98fa7577f1e?auto=format&fit=crop&w=800&q=80" class="w-full h-full object-cover hover:scale-105 transition duration-500" alt="Dairy Cow">
+                    </div>
+                    <div class="flex justify-between items-start mb-4">
+                        <h4 class="text-2xl font-bold">Premium Dairy (In-Calf Heifers)</h4>
+                        <span class="bg-blue-100 text-blue-700 text-xs font-bold px-3 py-1 rounded-full">High Yield</span>
+                    </div>
+                    <p class="text-slate-600 mb-6">Pedigree Friesian, Ayrshire, and Fleckvieh heifers. Selected for exceptional udder conformation, milk volume (30L+ daily potential), and high butterfat content.</p>
+                    <div class="grid grid-cols-2 gap-4 mb-6">
+                        <div class="bg-stone-50 p-3 rounded-lg"><span class="block text-xs text-slate-500">Gestation</span><span class="font-bold">3-7 Months</span></div>
+                        <div class="bg-stone-50 p-3 rounded-lg"><span class="block text-xs text-slate-500">Vaccination</span><span class="font-bold">Fully Cleared</span></div>
+                    </div>
+                    <a href="https://wa.me/254799008282?text=I%20want%20to%20order%20In-Calf%20Dairy%20Heifers." target="_blank" class="block w-full text-center bg-stone-900 text-white py-3 rounded-xl font-bold hover:bg-emerald-600 transition">Request Dairy Catalog</a>
+                </div>
+
+                <!-- Beef Focus -->
+                <div class="bg-white rounded-3xl p-8 shadow-sm border border-stone-200 hover:shadow-xl transition">
+                    <div class="h-64 rounded-2xl mb-6 overflow-hidden">
+                        <img src="https://images.unsplash.com/photo-1546455643-af780c885994?auto=format&fit=crop&w=800&q=80" class="w-full h-full object-cover hover:scale-105 transition duration-500" alt="Beef Bull">
+                    </div>
+                    <div class="flex justify-between items-start mb-4">
+                        <h4 class="text-2xl font-bold">Commercial Beef & Stud Bulls</h4>
+                        <span class="bg-red-100 text-red-700 text-xs font-bold px-3 py-1 rounded-full">Fast Growth</span>
+                    </div>
+                    <p class="text-slate-600 mb-6">Pure Boran, Brahman, and Angus crosses. Built for tough terrains, rapid weight gain, and premium meat marbling. Perfect for feedlots or upgrading local herds.</p>
+                    <div class="grid grid-cols-2 gap-4 mb-6">
+                        <div class="bg-stone-50 p-3 rounded-lg"><span class="block text-xs text-slate-500">Weight Range</span><span class="font-bold">250kg - 800kg+</span></div>
+                        <div class="bg-stone-50 p-3 rounded-lg"><span class="block text-xs text-slate-500">Adaptability</span><span class="font-bold">High (Arid/Semi-Arid)</span></div>
+                    </div>
+                    <a href="https://wa.me/254799008282?text=I%20want%20to%20order%20Beef%20Cattle%20or%20Stud%20Bulls." target="_blank" class="block w-full text-center bg-stone-900 text-white py-3 rounded-xl font-bold hover:bg-emerald-600 transition">Request Beef Catalog</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="shoats" class="py-20 px-4 bg-white">
+        <div class="max-w-7xl mx-auto">
+            <h3 class="text-4xl font-extrabold text-center mb-16">Sheep & Goat Division</h3>
+            <div class="grid md:grid-cols-3 gap-6">
+                <!-- Boer Goat -->
+                <div class="border border-stone-200 rounded-2xl p-4 hover:border-emerald-500 transition group">
+                    <img src="https://images.unsplash.com/photo-1524024973431-2ad916746881?auto=format&fit=crop&w=500&q=80" class="w-full h-48 object-cover rounded-xl mb-4 group-hover:opacity-90">
+                    <h5 class="text-xl font-bold mb-2">South African Boer Goats</h5>
+                    <p class="text-sm text-slate-600 mb-4">The ultimate meat goat. Rapid growth rates, high twinning ratios, and excellent carcass quality.</p>
+                    <a href="https://wa.me/254799008282?text=Quote%20for%20Boer%20Goats" target="_blank" class="text-emerald-600 font-bold hover:underline">Get Pricing →</a>
+                </div>
+                <!-- Dairy Goat -->
+                <div class="border border-stone-200 rounded-2xl p-4 hover:border-emerald-500 transition group">
+                    <img src="https://images.unsplash.com/photo-1582282577239-0144ec94ef0b?auto=format&fit=crop&w=500&q=80" class="w-full h-48 object-cover rounded-xl mb-4 group-hover:opacity-90">
+                    <h5 class="text-xl font-bold mb-2">Alpine & Toggenburg</h5>
+                    <p class="text-sm text-slate-600 mb-4">Premium dairy goats producing up to 4-6 liters daily. Highly adaptable and disease resistant.</p>
+                    <a href="https://wa.me/254799008282?text=Quote%20for%20Dairy%20Goats" target="_blank" class="text-emerald-600 font-bold hover:underline">Get Pricing →</a>
+                </div>
+                <!-- Dorper Sheep -->
+                <div class="border border-stone-200 rounded-2xl p-4 hover:border-emerald-500 transition group">
+                    <img src="https://images.unsplash.com/photo-1484557985045-edf25e08da73?auto=format&fit=crop&w=500&q=80" class="w-full h-48 object-cover rounded-xl mb-4 group-hover:opacity-90">
+                    <h5 class="text-xl font-bold mb-2">Pedigree Dorper Sheep</h5>
+                    <p class="text-sm text-slate-600 mb-4">Hardy, low-maintenance, fast-growing meat sheep. Ideal for both intensive and free-range systems.</p>
+                    <a href="https://wa.me/254799008282?text=Quote%20for%20Dorper%20Sheep" target="_blank" class="text-emerald-600 font-bold hover:underline">Get Pricing →</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="py-2 px-4 bg-stone-900 text-white">
+        <div class="max-w-7xl mx-auto py-16">
+            <div class="grid md:grid-cols-2 gap-12">
+                <div id="genetics" class="bg-stone-800 rounded-3xl border border-stone-700 overflow-hidden group">
+                    <div class="h-48 overflow-hidden relative">
+                        <div class="absolute inset-0 bg-stone-900/40 group-hover:bg-transparent transition duration-500 z-10"></div>
+                        <img src="https://images.unsplash.com/photo-1581093458791-9f3c3900df4b?auto=format&fit=crop&w=800&q=80" alt="Semen Bank Lab" class="w-full h-full object-cover group-hover:scale-105 transition duration-500">
+                        <div class="absolute top-4 left-4 z-20 bg-stone-900/80 backdrop-blur px-3 py-1 rounded-full text-xs font-bold border border-stone-600">🧬 Lab Verified</div>
+                    </div>
+                    <div class="p-8">
+                        <h3 class="text-3xl font-bold mb-4">Semen & Embryo Bank</h3>
+                        <p class="text-stone-400 mb-6">Don't want to ship live animals? Upgrade your local herd with our imported sexed semen and embryos from world-champion bulls and rams. We offer Artificial Insemination (AI) and Embryo Transfer (ET) services globally.</p>
+                        <a href="https://wa.me/254799008282?text=I%20need%20details%20on%20Semen/Embryos" target="_blank" class="inline-block bg-white text-stone-900 px-6 py-2 rounded-lg font-bold hover:bg-stone-200 transition">View Genetics Catalog</a>
+                    </div>
+                </div>
+                <div id="consulting" class="bg-emerald-900 rounded-3xl border border-emerald-800 overflow-hidden group">
+                    <div class="h-48 overflow-hidden relative">
+                        <div class="absolute inset-0 bg-emerald-900/40 group-hover:bg-transparent transition duration-500 z-10"></div>
+                        <img src="https://images.unsplash.com/photo-1627920769841-f761921c5612?auto=format&fit=crop&w=800&q=80" alt="Farm Setup" class="w-full h-full object-cover group-hover:scale-105 transition duration-500">
+                        <div class="absolute top-4 left-4 z-20 bg-emerald-900/80 backdrop-blur px-3 py-1 rounded-full text-emerald-100 text-xs font-bold border border-emerald-700">📐 On-Site Planning</div>
+                    </div>
+                    <div class="p-8">
+                        <h3 class="text-3xl font-bold mb-4">Turnkey Farm Setup</h3>
+                        <p class="text-emerald-100 mb-6">Are you a new investor? We design zero-grazing units, feedlots, and milking parlors. We supply the animals, train your farm managers, and set up your nutrition plans for guaranteed ROI.</p>
+                        <a href="#vip" class="inline-block bg-emerald-500 text-white px-6 py-2 rounded-lg font-bold hover:bg-emerald-400 transition">Book Farm Audit</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="logistics" class="py-20 px-4 bg-stone-50">
+        <div class="max-w-7xl mx-auto text-center">
+            <h3 class="text-4xl font-extrabold mb-6">Global Logistics & Export Protocols</h3>
+            <p class="text-lg text-slate-600 mb-12 max-w-3xl mx-auto">Shipping livestock requires precision. We handle 100% of the red tape, ensuring your stock arrives alive, healthy, and fully compliant with international borders.</p>
+            
+            <div class="grid md:grid-cols-4 gap-6">
+                <div class="bg-white rounded-2xl shadow-sm border border-stone-100 overflow-hidden text-left hover:shadow-xl transition">
+                    <img src="https://images.unsplash.com/photo-1584559582128-b8be739912e1?auto=format&fit=crop&w=400&q=80" class="w-full h-32 object-cover" alt="Quarantine">
+                    <div class="p-6">
+                        <div class="text-3xl mb-3">🩺</div>
+                        <h4 class="font-bold text-lg mb-2">1. Quarantine</h4>
+                        <p class="text-sm text-slate-500">Mandatory state-approved isolation and testing for FMD, Brucellosis, etc.</p>
+                    </div>
+                </div>
+                <div class="bg-white rounded-2xl shadow-sm border border-stone-100 overflow-hidden text-left hover:shadow-xl transition">
+                    <img src="https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?auto=format&fit=crop&w=400&q=80" class="w-full h-32 object-cover" alt="Documentation">
+                    <div class="p-6">
+                        <div class="text-3xl mb-3">📑</div>
+                        <h4 class="font-bold text-lg mb-2">2. Documentation</h4>
+                        <p class="text-sm text-slate-500">We secure Export Permits, Vet Health Certificates, and Customs clearance.</p>
+                    </div>
+                </div>
+                <div class="bg-white rounded-2xl shadow-sm border border-stone-100 overflow-hidden text-left hover:shadow-xl transition">
+                    <img src="https://images.unsplash.com/photo-1519003722824-194d4455a60c?auto=format&fit=crop&w=400&q=80" class="w-full h-32 object-cover" alt="Transport">
+                    <div class="p-6">
+                        <div class="text-3xl mb-3">✈️</div>
+                        <h4 class="font-bold text-lg mb-2">3. Transport</h4>
+                        <p class="text-sm text-slate-500">Specialized livestock trucks and chartered air-freight with animal handlers.</p>
+                    </div>
+                </div>
+                <div class="bg-white rounded-2xl shadow-sm border border-stone-100 overflow-hidden text-left hover:shadow-xl transition">
+                    <img src="https://images.unsplash.com/photo-1589923188900-85dae523342b?auto=format&fit=crop&w=400&q=80" class="w-full h-32 object-cover" alt="Handover">
+                    <div class="p-6">
+                        <div class="text-3xl mb-3">🤝</div>
+                        <h4 class="font-bold text-lg mb-2">4. Handover</h4>
+                        <p class="text-sm text-slate-500">Safe delivery to your farm with post-arrival stress-management protocols.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="py-16 px-4 bg-white border-t border-stone-200">
+        <div class="max-w-7xl mx-auto">
+            <div class="flex flex-col md:flex-row justify-between items-start md:items-end mb-10 gap-4">
+                <div>
+                    <span class="text-emerald-600 font-bold tracking-wider text-sm uppercase mb-2 flex items-center gap-2">
+                        <span class="w-3 h-3 rounded-full bg-red-500 animate-ping"></span> Live Dispatch Feed
+                    </span>
+                    <h3 class="text-3xl font-bold">Transparency in Action</h3>
+                </div>
+                <a href="https://wa.me/254799008282?text=Can%20I%20schedule%20a%20live%20video%20tour%20of%20the%20farm?" target="_blank" class="border-2 border-emerald-600 text-emerald-700 px-6 py-3 rounded-xl font-bold hover:bg-emerald-50 transition flex items-center gap-2">
+                    Request Live Video Tour <span class="text-xl">🎥</span>
+                </a>
+            </div>
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-4">
+                <div class="relative group overflow-hidden rounded-2xl border border-stone-200">
+                    <div class="absolute top-3 left-3 z-20 flex gap-2 items-center">
+                        <span class="bg-red-600 text-white text-[10px] font-bold px-2 py-1 rounded flex items-center gap-1 uppercase tracking-wider"><span class="w-1.5 h-1.5 bg-white rounded-full animate-pulse"></span> REC</span>
+                        <span class="bg-black/60 backdrop-blur text-white text-[10px] px-2 py-1 rounded">2 mins ago</span>
+                    </div>
+                    <img src="https://images.unsplash.com/photo-1596733430284-f743727520c0?auto=format&fit=crop&w=400&q=80" alt="Live Update 1" class="w-full h-64 object-cover group-hover:scale-110 transition duration-700 shadow-sm">
+                    <div class="absolute inset-0 bg-gradient-to-t from-black/90 via-black/20 to-transparent flex flex-col justify-end p-4">
+                        <p class="text-emerald-400 text-xs font-bold mb-1">📍 JKIA Cargo Terminal</p>
+                        <p class="text-white text-sm font-bold leading-tight">Loading 50 Heifers to Uganda</p>
+                    </div>
+                </div>
+                <div class="relative group overflow-hidden rounded-2xl border border-stone-200">
+                    <div class="absolute top-3 left-3 z-20 flex gap-2 items-center">
+                        <span class="bg-black/60 backdrop-blur text-white text-[10px] px-2 py-1 rounded">45 mins ago</span>
+                    </div>
+                    <img src="https://images.unsplash.com/photo-1516467508483-a7212febe31a?auto=format&fit=crop&w=400&q=80" alt="Live Update 2" class="w-full h-64 object-cover group-hover:scale-110 transition duration-700 shadow-sm">
+                    <div class="absolute inset-0 bg-gradient-to-t from-black/90 via-black/20 to-transparent flex flex-col justify-end p-4">
+                        <p class="text-emerald-400 text-xs font-bold mb-1">📍 Naivasha Quarantine</p>
+                        <p class="text-white text-sm font-bold leading-tight">Vet Inspection - Boran Bulls</p>
+                    </div>
+                </div>
+                <div class="relative group overflow-hidden rounded-2xl border border-stone-200">
+                    <div class="absolute top-3 left-3 z-20 flex gap-2 items-center">
+                        <span class="bg-black/60 backdrop-blur text-white text-[10px] px-2 py-1 rounded">3 hours ago</span>
+                    </div>
+                    <img src="https://images.unsplash.com/photo-1560548174-a633aab31ea3?auto=format&fit=crop&w=400&q=80" alt="Live Update 3" class="w-full h-64 object-cover group-hover:scale-110 transition duration-700 shadow-sm">
+                    <div class="absolute inset-0 bg-gradient-to-t from-black/90 via-black/20 to-transparent flex flex-col justify-end p-4">
+                        <p class="text-emerald-400 text-xs font-bold mb-1">📍 Kinshasa, DRC</p>
+                        <p class="text-white text-sm font-bold leading-tight">Safe Arrival at Client Farm</p>
+                    </div>
+                </div>
+                <div class="relative group overflow-hidden rounded-2xl border border-stone-200">
+                    <div class="absolute top-3 left-3 z-20 flex gap-2 items-center">
+                        <span class="bg-black/60 backdrop-blur text-white text-[10px] px-2 py-1 rounded">5 hours ago</span>
+                    </div>
+                    <img src="https://images.unsplash.com/photo-1604753554162-8e3b2e564cc8?auto=format&fit=crop&w=400&q=80" alt="Live Update 4" class="w-full h-64 object-cover group-hover:scale-110 transition duration-700 shadow-sm">
+                    <div class="absolute inset-0 bg-gradient-to-t from-black/90 via-black/20 to-transparent flex flex-col justify-end p-4">
+                        <p class="text-emerald-400 text-xs font-bold mb-1">📍 Eldoret HQ</p>
+                        <p class="text-white text-sm font-bold leading-tight">Boer Goat Multiplication Center</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="py-16 px-4 bg-stone-100">
+        <div class="max-w-3xl mx-auto">
+            <h3 class="text-3xl font-bold text-center mb-10">Frequently Asked Questions</h3>
+            <div class="space-y-4">
+                <div class="bg-white p-6 rounded-xl shadow-sm border border-stone-200">
+                    <h4 class="font-bold text-lg mb-2">Do you deliver internationally?</h4>
+                    <p class="text-slate-600 text-sm">Yes. We regularly export across East, Central, and West Africa, as well as the Middle East. We handle all customs, quarantine, and flight charters.</p>
+                </div>
+                <div class="bg-white p-6 rounded-xl shadow-sm border border-stone-200">
+                    <h4 class="font-bold text-lg mb-2">What is the minimum order quantity?</h4>
+                    <p class="text-slate-600 text-sm">For local Kenyan deliveries, there is no strict minimum. For international air freight, minimums apply based on crate sizes to ensure cost-efficiency for the buyer.</p>
+                </div>
+                <div class="bg-white p-6 rounded-xl shadow-sm border border-stone-200">
+                    <h4 class="font-bold text-lg mb-2">Do you provide farm training?</h4>
+                    <p class="text-slate-600 text-sm">Absolutely. We offer farm manager training, nutritional formulations, and ongoing veterinary advisory to ensure your animals perform optimally.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="vip" class="py-24 px-4 bg-emerald-700 text-white relative overflow-hidden">
+        <div class="absolute -top-24 -right-24 w-96 h-96 bg-emerald-600 rounded-full blur-3xl opacity-50"></div>
+        <div class="max-w-4xl mx-auto relative z-10 bg-white/10 backdrop-blur-md p-8 md:p-12 rounded-3xl border border-emerald-500/30 shadow-2xl">
+            <div class="text-center mb-8">
+                <h3 class="text-3xl md:text-5xl font-extrabold mb-4">Start Your Livestock Project</h3>
+                <p class="text-emerald-100 text-lg">Whether you need a single pedigree bull or a 500-head commercial dairy setup, submit your requirements below for a priority consultation.</p>
+            </div>
+            
+            <form onsubmit="handleVipForm(event)" class="space-y-6">
+                <div class="grid md:grid-cols-2 gap-6">
+                    <div>
+                        <label class="block text-sm font-medium text-emerald-100 mb-2">Full Name / Company</label>
+                        <input type="text" required class="w-full bg-emerald-900/50 border border-emerald-600 rounded-xl p-4 text-white placeholder-emerald-300 focus:outline-none focus:border-white transition" placeholder="John Doe Farms">
+                    </div>
+                    <div>
+                        <label class="block text-sm font-medium text-emerald-100 mb-2">WhatsApp Number</label>
+                        <input type="tel" required class="w-full bg-emerald-900/50 border border-emerald-600 rounded-xl p-4 text-white placeholder-emerald-300 focus:outline-none focus:border-white transition" placeholder="+254 700 000 000">
+                    </div>
+                </div>
+                <div>
+                    <label class="block text-sm font-medium text-emerald-100 mb-2">Primary Interest</label>
+                    <select class="w-full bg-emerald-900/50 border border-emerald-600 rounded-xl p-4 text-white focus:outline-none focus:border-white transition appearance-none">
+                        <option value="dairy">Dairy Cattle (Heifers/Cows)</option>
+                        <option value="beef">Beef Cattle (Bulls/Steers)</option>
+                        <option value="goats">Goats (Boer/Dairy)</option>
+                        <option value="sheep">Sheep (Dorper/Merino)</option>
+                        <option value="farm_setup">Complete Farm Setup / Consulting</option>
+                    </select>
+                </div>
+                <div>
+                    <label class="block text-sm font-medium text-emerald-100 mb-2">Project Details & Location</label>
+                    <textarea rows="3" required class="w-full bg-emerald-900/50 border border-emerald-600 rounded-xl p-4 text-white placeholder-emerald-300 focus:outline-none focus:border-white transition" placeholder="I am looking to start a dairy farm in Nairobi with 20 heifers..."></textarea>
+                </div>
+                <button type="submit" class="w-full bg-white text-emerald-800 p-5 rounded-xl font-extrabold text-lg hover:bg-stone-100 transition shadow-xl transform hover:-translate-y-1">Request VIP Consultation</button>
+            </form>
+        </div>
+    </section>
+
+    <footer class="bg-stone-900 pt-16 pb-8 text-stone-400 px-4">
+        <div class="max-w-7xl mx-auto grid md:grid-cols-4 gap-8 mb-12">
+            <div class="col-span-2">
+                <h4 class="text-white text-2xl font-bold mb-4">LIVESTOCK GENESIS PLUS+</h4>
+                <p class="mb-6 max-w-sm">The global standard in premium genetics, livestock export, and agricultural wealth creation.</p>
+                <div class="flex gap-4">
+                    <p class="flex items-center gap-2"><span class="text-emerald-500">📞</span> +254 799 008 282</p>
+                    <p class="flex items-center gap-2"><span class="text-emerald-500">📍</span> Kenya, East Africa</p>
+                </div>
+            </div>
+            <div>
+                <h4 class="text-white font-bold mb-4">Quick Links</h4>
+                <ul class="space-y-2">
+                    <li><a href="#cattle" class="hover:text-emerald-400 transition">Dairy & Beef</a></li>
+                    <li><a href="#shoats" class="hover:text-emerald-400 transition">Sheep & Goats</a></li>
+                    <li><a href="#logistics" class="hover:text-emerald-400 transition">Export Logistics</a></li>
+                    <li><a href="#consulting" class="hover:text-emerald-400 transition">Consultancy</a></li>
+                </ul>
+            </div>
+            <div>
+                <h4 class="text-white font-bold mb-4">Join The Genesis Network</h4>
+                <p class="text-sm mb-4">Get secret stock drops and market insights before anyone else.</p>
+                <form onsubmit="handleNewsletter(event)" class="flex">
+                    <input type="email" placeholder="Email Address" required class="bg-stone-800 p-3 rounded-l-lg w-full focus:outline-none text-white">
+                    <button type="submit" class="bg-emerald-600 text-white px-4 py-3 rounded-r-lg hover:bg-emerald-500 transition font-bold">→</button>
+                </form>
+            </div>
+        </div>
+        <div class="text-center text-sm border-t border-stone-800 pt-8">
+            <p>&copy; 2026 LIVESTOCK GENESIS PLUS+. All Rights Reserved.</p>
+        </div>
+    </footer>
+
+    <!-- Floating WhatsApp Button -->
+    <a href="https://wa.me/254799008282?text=Hello%20Genesis%20Plus+,%20I%20am%20visiting%20your%20website%20and%20need%20assistance." target="_blank" class="fixed bottom-6 right-6 z-50 bg-[#25D366] text-white p-4 rounded-full shadow-2xl hover:scale-110 transition duration-300 flex items-center justify-center group">
+        <svg class="w-8 h-8" fill="currentColor" viewBox="0 0 24 24"><path d="M12.031 6.172c-3.181 0-5.767 2.586-5.768 5.766-.001 1.298.38 2.27 1.019 3.287l-.582 2.128 2.182-.573c.978.58 1.711.928 2.851.929 3.178 0 5.767-2.587 5.768-5.766.001-3.187-2.575-5.77-5.77-5.771zm3.392 8.244c-.144.405-.837.774-1.17.824-.299.045-.677.063-1.092-.069-.252-.08-.575-.187-.988-.365-1.739-.751-2.874-2.502-2.961-2.614-.087-.112-.708-.94-.708-1.793s.448-1.273.606-1.446c.158-.173.346-.217.462-.217l.332.006c.106.005.249-.04.39.298.144.347.491 1.2.534 1.287.043.087.072.188.014.304-.058.116-.087.188-.173.289l-.26.304c-.087.086-.177.18-.076.354.101.174.449.741.964 1.201.662.591 1.221.774 1.394.86s.274.072.376-.043c.101-.116.433-.506.549-.68.116-.173.231-.145.39-.087s1.011.477 1.184.564.289.13.332.202c.045.072.045.419-.099.824zm-3.423-14.416c-6.627 0-12 5.373-12 12s5.373 12 12 12 12-5.373 12-12-5.373-12-12-12zm.029 18.88c-1.161 0-2.305-.292-3.318-.844l-3.677.964.984-3.595c-.607-1.052-.927-2.246-.926-3.468.001-3.825 3.113-6.937 6.937-6.937 3.825 0 6.938 3.112 6.938 6.937 0 3.824-3.113 6.938-6.938 6.938z"/></svg>
+        <span class="absolute right-16 bg-white text-stone-800 text-sm font-bold px-4 py-2 rounded-xl shadow-lg opacity-0 group-hover:opacity-100 transition-opacity whitespace-nowrap pointer-events-none">Chat with Sales!</span>
+    </a>
+
+    <!-- Exit Intent Modal -->
+    <div id="exitModal" class="fixed inset-0 bg-black/60 backdrop-blur-sm z-[100] hidden flex items-center justify-center px-4">
+        <div class="bg-white rounded-3xl max-w-lg w-full p-8 relative shadow-2xl transform scale-95 opacity-0 transition-all duration-300" id="exitModalContent">
+            <button onclick="closeModal()" class="absolute top-4 right-4 text-stone-400 hover:text-stone-800 text-2xl font-bold">&times;</button>
+            <div class="text-center mb-6">
+                <span class="bg-red-100 text-red-600 font-bold px-3 py-1 rounded-full text-xs uppercase tracking-wider mb-4 inline-block">Wait! Before you leave...</span>
+                <h3 class="text-2xl font-extrabold mb-2">Get the 2026 African Livestock Investment Guide</h3>
+                <p class="text-slate-600 text-sm">Discover which breeds yield the highest ROI and how to avoid common import mistakes. Free download.</p>
+            </div>
+            <form onsubmit="handleExitForm(event)" class="space-y-4">
+                <input type="email" placeholder="Enter your best email" required class="w-full border-2 border-stone-200 rounded-xl p-4 focus:outline-none focus:border-emerald-500">
+                <button type="submit" class="w-full bg-emerald-600 text-white p-4 rounded-xl font-bold hover:bg-emerald-700 transition shadow-lg text-lg">Send My Free Guide Now</button>
+            </form>
+            <p class="text-center text-xs text-stone-400 mt-4 cursor-pointer hover:underline" onclick="closeModal()">No thanks, I don't want to increase my farm's profits.</p>
+        </div>
+    </div>
+
+    <script>
+        // Custom Toast Function (Replaces alerts)
+        function showToast(message) {
+            const toast = document.getElementById('toast');
+            const toastMsg = document.getElementById('toastMessage');
+            toastMsg.textContent = message;
+            
+            toast.classList.remove('translate-x-full', 'opacity-0');
+            
+            setTimeout(() => {
+                toast.classList.add('translate-x-full', 'opacity-0');
+            }, 4000);
+        }
+
+        // Form Handlers
+        function handleVipForm(e) {
+            e.preventDefault();
+            showToast("VIP Request Sent! Our Director will contact you via WhatsApp shortly.");
+            e.target.reset();
+        }
+
+        function handleNewsletter(e) {
+            e.preventDefault();
+            showToast("Added to the Genesis Network! Watch your inbox.");
+            e.target.reset();
+        }
+
+        function handleExitForm(e) {
+            e.preventDefault();
+            showToast("Guide sent to your email! Redirecting to farm catalog...");
+            closeModal();
+            e.target.reset();
+        }
+
+        // Exit Intent Logic
+        let modalShown = false;
+        const exitModal = document.getElementById('exitModal');
+        const exitModalContent = document.getElementById('exitModalContent');
+
+        function openModal() {
+            if (modalShown) return;
+            modalShown = true;
+            exitModal.classList.remove('hidden');
+            // Small delay to allow display:block to apply before animating opacity/scale
+            setTimeout(() => {
+                exitModalContent.classList.remove('scale-95', 'opacity-0');
+                exitModalContent.classList.add('scale-100', 'opacity-100');
+            }, 10);
+        }
+
+        function closeModal() {
+            exitModalContent.classList.remove('scale-100', 'opacity-100');
+            exitModalContent.classList.add('scale-95', 'opacity-0');
+            setTimeout(() => {
+                exitModal.classList.add('hidden');
+            }, 300);
+        }
+
+        // Trigger on mouse leave (desktop)
+        document.addEventListener('mouseleave', (e) => {
+            if (e.clientY < 0) {
+                openModal();
+            }
+        });
+
+        // Trigger after 45 seconds (fallback for mobile/desktop)
+        setTimeout(() => {
+            openModal();
+        }, 45000);
+    </script>
